@@ -7,49 +7,49 @@ const generateMarkdown = require('./utils/generateMarkdown');
 const questions = [
     {
         type: 'input',
-        name: 'project title',
-        message: 'Please enter the project title',
+        name: 'title',
+        message: 'Please enter the project title: ',
     }, 
     {
         type: 'input',
         name: 'description',
-        message: 'Please provide the description of your project',
+        message: 'Please provide the description of your project: ',
     },
     {
         type: 'input',
         name: 'installation',
-        message: 'Please provide the installation instruction',
+        message: 'Please provide the installation instruction: ',
     },
     {
         type: 'input',
         name: 'usage',
-        message: 'Please provide usage information',
+        message: 'Please provide usage information: ',
     },
     {
         type: 'input',
-        name: 'contribution guidelines',
-        message: 'Please provide contribution guidelines',
+        name: 'contribution',
+        message: 'Please provide contribution guidelines: ',
     },
     {
         type: 'input',
-        name: 'test instructions',
-        message: 'Please provide test instructions',
+        name: 'tests',
+        message: 'Please provide test instructions: ',
     },
     {
         type: 'list',
         name: 'license',
         message: 'Please choose a license',
-        options: ['MIT', 'Apache 2.0', 'GNU GPL v3', 'BSD 3', 'BSD 2', 'MPL 2.0', 'EPL', 'Creative Commons']
+        choices: ['MIT', 'Apache 2.0', 'GPL 3.0', 'BSD 2', 'BSD 3', 'MPL 2.0', 'EPL 2.0', 'Creative Commons', 'None'],
     },
     {
         type: 'input',
         name: 'github',
-        message: 'Please provide github username',
+        message: 'Please provide github username: ',
     },
     {
         type: 'input',
         name: 'email',
-        message: 'Please provide email address',
+        message: 'Please provide email address: ',
     },
 ];
 
