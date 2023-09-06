@@ -1,7 +1,7 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// This function generates a license badge based on the license provided.
 function renderLicenseBadge(license) {
   switch (license) {
+    // It uses different cases based on license type to return the appropriate badge.
     case 'MIT':
       return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
     case 'Apache 2.0':
@@ -23,10 +23,10 @@ function renderLicenseBadge(license) {
   }
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// This function generates a link for the license based on the license provided.
 function renderLicenseLink(license) {
   switch (license) {
+    // It uses different cases based on license type to return the appropriate link
     case 'MIT':
       return 'https://opensource.org/licenses/MIT';
     case 'Apache 2.0':
@@ -48,17 +48,18 @@ function renderLicenseLink(license) {
   }
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// This function generates the license section for a README.
 function renderLicenseSection(license) {
+  // If no license is provided or license is set to 'None', this function returns an empty string
   if (!license || license === 'None') return '';
   return `## License 
   This project is covered under the [${license}](${renderLicenseLink(license)}) license.
   `;
 }
 
-// TODO: Create a function to generate markdown for README
+// This function generates markdown formatted content for a README.
 function generateMarkdown(data) {
+  // The template for README.md with placeholders are replaced by user's data inputs
   return `
   # ${data.title} 
   ${renderLicenseBadge(data.license)}
@@ -96,4 +97,5 @@ For any questions, please reach out to me at the following:
 `;
 }
 
+// This exports the function
 module.exports = generateMarkdown;
